@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>fibonachi</title>
+    </head>
+    <body>
+        <h2 id="text"></h2>
+        <script>
+            let fist = 0;
+            let second = 1;
+            let num,temp;
+            let text = document.getElementById("text");
+            let limit = prompt("enter limit of fibonachi: ");
+            console.log(limit);
+            
+            for (let i = 0; second < limit; i++) {
+                    text.innerHTML = `${text.innerHTML} ${second+", "}`;
+                    temp = fist;
+                    fist = second;
+                    second += temp;
+            }
+        </script>
+    </body>
+</html>

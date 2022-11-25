@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>factorial.com</title>
+	</head>
+	<body>
+		<input type="number" id="input" />
+		<button onclick="getSet();">click me</button>
+		<script>
+			function getSet()
+			{
+				let num = document.getElementById("input").value;
+				let fact = 1;
+				for(let i=1;i<=num;i++)
+				{
+					fact *= i;
+				}
+				document.write(fact);
+			}
+		</script>
+	</body>
+</html>

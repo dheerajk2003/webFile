@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>readWrite.com</title>
+		<style>
+			*{
+				font-size: large;
+			}
+			body{
+				box-sizing: border-box;
+				text-align: center;
+				padding: 15% 25% 10% 25%;
+			}
+			#txtname,#taDescription{
+				border-radius: 15px;
+				padding: 5px;
+			}
+			#btn{
+				border-radius: 5px;
+				width: 80px;
+				height: 30px;
+				display: block;
+				margin: 15px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Name:</p>
+		<input type="text" id="txtname" />
+		<p>Tell something about you:</p>
+		<textarea rows="4" cols"40" id="taDescription"></textarea>
+		<p>Gender:</p>
+		<span>Male-</span>
+		<input type="radio" id="radioMale" value="Male" name="gender">
+		<span>Female-</span>
+		<input type="radio" id="radioFemale" value="Female" name="gender">
+		<span>Other-</span>
+		<input type="radio" id="radioOther" value="Other" name="gender">
+		<button id="btn" onclick="getValues()" >Print</button>
+		<p id="para"></p>
+
+		<script>
+			let name = document.getElementById("txtname");
+			let desc = document.getElementById("taDescription");
+			let radioEl = document.getElementsByName("gender");
+			let btn = document.getElementById("btn");
+			let para = document.getElementById("para");
+			function getValues()
+			{
+				para.innerHTML = `${para.innerHTML} ${name.value} <br>`;
+				para.innerHTML = `${para.innerHTML} ${desc.value} <br>`;
+				for(let i=0;i<radioEl.length;i++)
+				{
+					if(radioEl[i].checked)
+					{
+						para.innerHTML = `${para.innerHTML} ${radioEl[i].value} <br>`;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
