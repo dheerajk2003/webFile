@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>maxValue.com</title>
+    </head>
+    <body>
+        <h2 id="arr"></h2>
+        <h2 id="max"></h2>
+        <script>
+            let arr = document.getElementById("arr");
+            let max = document.getElementById("max");
+            let temp = 0,num = [];
+            let limit = prompt("enter limit of array");
+            for(let i=0;i<limit;i++)
+            {
+                num[i] = prompt("enter element of array");
+                arr.innerHTML = `${arr.innerHTML} ${num[i]}`
+            }
+            for(let i=0;i<limit;i++)
+            {
+                if(num[i]>temp)
+                    temp = num[i];
+            }
+            max.innerHTML = "maximum num = "+temp;
+        </script>
+    </body>
+</html>
