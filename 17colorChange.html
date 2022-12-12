@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>colorChanged.com</title>
+        <title>colorChange</title>
         <style>
             *{
                 box-sizing: border-box;
@@ -25,13 +25,13 @@
         </style>
     </head>
     <Body>
-        <section>
+        <section id="section">
             <h1>JavaScript</h1>
-            <p>JavaScript is a programming language used for web mainly it is used for validating forms,etc. JavaScript is different from java as java is a pure oop language while avascript is a scriptting language compiled at client side. JavaScript helps to make a webpage more dynamic and interactive. With JavaScript we can handle event driven codes.</p>
-            <button id="btn" onclick="changeColor();">Dark</button>
+            <p>JavaScript is a programming language used for web mainly it is used for validating forms,etc. JavaScript is different from java as java is a pure oop language while javascript is a scriptting language compiled at client side. JavaScript helps to make a webpage more dynamic and interactive. With JavaScript we can handle event driven codes.</p>
+            <button id="btn" onclick="changeColor()">Dark</button>
         </section>
         <script>
-            let sect = document.getElementsByTagName("section");
+            let sect = document.getElementById("section");
             let h1 = document.getElementsByTagName("h1");
             let para = document.getElementsByTagName("p");
             let btn = document.getElementsByTagName("button");
@@ -39,12 +39,12 @@
             function changeColor()
             {
                 if(!dark)
-                    toDark();
+                    todark();
                 else if(dark)
-                    toLight();
+                    tolight();
             }
-            function toDark(){
-                sect[0].style.backgroundColor = "black";
+            function todark(){
+                sect.style.backgroundColor = "rgb(49, 49, 49)";
                 h1[0].style.color = "white";
                 para[0].style.color = "white";
                 btn[0].style.backgroundColor = "white";
@@ -52,8 +52,8 @@
                 btn[0].innerHTML = "Light";
                 dark = true;
             }
-            function toLight(){
-                sect[0].style.backgroundColor = "white";
+            function tolight(){
+                sect.style.backgroundColor = "white";
                 h1[0].style.color = "black";
                 para[0].style.color = "black";
                 btn[0].style.backgroundColor = "black";

@@ -24,16 +24,13 @@
         </style>
     </head>
     <body>
-        
-            <h1 id="h1">TYPING TEST</h1>
-        
-        <div id="prevtext" class="center"></div class="center">
+        <h1 id="h1">TYPING TEST</h1>
+        <div id="prevtext" class="center"></div>
             <textarea name="area" id="area" cols="30" rows="5"></textarea>
             <button id="btn" onclick="Checked()">CHECK</button>
-        
         <div id="allscores" class="center">
             <h2 id="score"></h2>
-            <div id="errordiv"></div class="center">
+            <div id="errordiv"></div>
         </div>
         <script>
             let prevtext = document.getElementById("prevtext");
@@ -47,11 +44,9 @@
             let ansString;
             let myscore = stringArr.length;
 
-            //getting input. **---
             function Checked()
             {
                 ansString = area.value.split(" ");
-                // console.log(ansString);
                 logic();
             }
 
