@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Dialog boxes</title>
+    </head>
+    <body>
+        <p id="para"></p>
+
+        <script>
+            alert("alert gives a message to the user");
+            let confirms = confirm("confirm returns true when 'OK' is pressed and false when 'cancel' is pressed");
+            let prompts = prompt("prompt takes input from a popup")
+            let para = document.querySelector("#para");
+            para.innerHTML = confirms + "<br>" + prompts;
+        </script>
+    </body>
+</html>

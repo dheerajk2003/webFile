@@ -1,8 +1,9 @@
 <html lang="en">
+
 <head>
-    <title>Document</title>
+    <title>clock</title>
     <style>
-        body{
+        body {
             height: 100vh;
             margin: 0px;
             padding: 10rem;
@@ -12,13 +13,13 @@
         }
     </style>
 </head>
+
 <body>
     <h1 id="dateText"></h1>
     <h1 id="timeText">00</h1>
     <script>
         setInterval(setTime, 1000);
-        function setTime()
-        {
+        function setTime() {
             let time = new Date();
             let hours = time.getHours();
             let minutes = time.getMinutes();
@@ -30,19 +31,20 @@
             let dates = document.getElementById("dateText");
             let am_pm = "am";
 
-            if(hours > 12){
-                hours-=12;
-                am_pm="pm";
+            if (hours > 12) {
+                hours -= 12;
+                am_pm = "pm";
             }
 
-            hours = hours < 10 ? "0"+hours : hours;
-            minutes = minutes < 10 ? "0"+minutes : minutes;
-            seconds = seconds < 10 ? "0"+seconds : seconds;
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
             console.log(`${hours} : ${minutes} : ${seconds} : ${am_pm}`);
             dates.innerHTML = `${cdate}:${cmonth}:${cyear}`;
             text.innerHTML = `${hours}:${minutes}:${seconds}:${am_pm}`;
-        }    
+        }
         setTime();
     </script>
 </body>
+
 </html>

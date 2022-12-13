@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>dateSring</title>
+
+    </head>
+    <body>
+        <h1>Date Functions</h1>
+        <p id="paraD"></p>
+        <h1>String Functions</h1>
+        <p id="paraS"></p>
+        <script>
+            let paraD = document.querySelector("#paraD");
+            let paraS = document.querySelector("#paraS");
+            let date = new Date();
+            paraD.innerHTML = paraD.innerHTML + `getFullYear() : ${date.getFullYear()} <br>`;
+            paraD.innerHTML = paraD.innerHTML + `getMonth() : ${date.getMonth()} <br>`;
+            paraD.innerHTML = paraD.innerHTML + `getDate() : ${date.getDate()} <br>`;
+            paraD.innerHTML = paraD.innerHTML + `getDay() : ${date.getDay()} <br>`;
+            paraD.innerHTML = paraD.innerHTML + `getHours() : ${date.getHours()} <br>`;
+            paraD.innerHTML = paraD.innerHTML + `getMinutes() : ${date.getMinutes()} <br>`;
+            paraD.innerHTML = paraD.innerHTML + `getSeconds() : ${date.getSeconds()} <br>`;
+            paraD.innerHTML = paraD.innerHTML + `getMilliseconds() : ${date.getMilliseconds()} <br>`;
+            paraD.innerHTML = paraD.innerHTML + `getTime() : ${date.getTime()}`;
+
+            let myString = "This is a Test String";
+            paraS.innerHTML = myString + "<br><br>";
+            paraS.innerHTML = paraS.innerHTML + `length : ${myString.length} <br>`;
+            paraS.innerHTML = paraS.innerHTML + `slice(5,7) : ${myString.slice(5,7)} <br>`;
+            paraS.innerHTML = paraS.innerHTML + `substring(5,7) : ${myString.substring(5,7)} <br>`;
+            paraS.innerHTML = paraS.innerHTML + `substr(5,7) : ${myString.substr(5,7)} <br>`;
+            paraS.innerHTML = paraS.innerHTML + `replace("test","text") : ${myString.replace("test","text")} <br>`;
+            paraS.innerHTML = paraS.innerHTML + `replaceAll("i","a") : ${myString.replaceAll("i","a")} <br>`;
+            paraS.innerHTML = paraS.innerHTML + `toUpperCase() : ${myString.toUpperCase()} <br>`;
+            paraS.innerHTML = paraS.innerHTML + `toLowerCase() : ${myString.toLowerCase()} <br>`;
+            paraS.innerHTML = paraS.innerHTML + `concat(" of text") : ${myString.concat(" of text")} <br>`;
+            let myStringArr = myString.split(" ");
+            paraS.innerHTML = paraS.innerHTML + `split(" ") : ${myStringArr}`;
+        </script>
+    </body>
+</html>

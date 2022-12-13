@@ -1,9 +1,8 @@
 <html>
     <head>
-        <title>printPattern.com</title>
+        <title>printPattern</title>
     </head>
     <body>
-        
         <script>
             let num = prompt("enter a number");
             for(let i=num;i>0;i--)
@@ -11,13 +10,9 @@
                 for(let j=1;j<=(2*num)-i;j++)
                 {
                     if((i-j)>0)
-                    {
                         document.body.innerHTML = `${document.body.innerHTML} &nbsp`;
-                    }
                     else
-                    {
                         document.body.innerHTML = `${document.body.innerHTML}*`;
-                    }
                 }
                 document.body.innerHTML = `${document.body.innerHTML}<br>`;
             }

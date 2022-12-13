@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>input using JQuery</title>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <input type="text" id="txt" placeholder="write something about you" />
+        <button id="btn">click</button>
+
+        <script>
+            $(document).ready( () => {
+                $("#btn").click(function () {
+                    let txtValue = $("#txt").val();
+                    alert(txtValue);
+                    $("#txt").val("");
+                });
+            });
+        </script>
+    </body>
+</html>
