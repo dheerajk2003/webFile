@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>JSvalidations</title>
+        <style>
+            body{
+                padding: 20px 20px; 
+            }
+            .inputs{
+                display: block;
+                margin: 10px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="email" class="inputs" placeholder="enter email" />
+        <input type="text" class="inputs" placeholder="enter username" />
+        <input type="password" class="inputs" placeholder="enter password" />
+        <input type="number" class="inputs" placeholder="enter age" />
+        <input type="checkbox" id="check"/><label for="check">accept our terms and conditions</label>
+        <p id="para"></p>
+        <input type="submit" class="inputs" placeholder="Submit" />
+
+        <script>
+            let para = document.querySelector("#para");
+            let myCB = document.querySelector("#check");
+            let inputs = document.querySelectorAll(".inputs");
+            inputs[4].addEventListener("click",() => {
+                if(inputs[0].value == "")
+                {
+                    para.innerHTML = "* enter email <br>";
+                }
+                if(inputs[1].value == "")
+                {
+                    para.innerHTML = para.innerHTML + "* enter user name <br>";
+                }
+                if(inputs[2].value == "")
+                {
+                    para.innerHTML = para.innerHTML + "* enter password <br>";
+                }
+                if(inputs[3].value < 18)
+                {
+                    para.innerHTML = para.innerHTML + "* age must be greater then 18 <br>";
+                }
+                if(myCB.checked == false)
+                {
+                    para.innerHTML = para.innerHTML + "*accept our terms and conditions <br>";
+                }
+                para.style.color = "red";
+            });
+        </script>
+    </body>
+</html>
