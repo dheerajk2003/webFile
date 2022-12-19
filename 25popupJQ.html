@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>popup using JQ</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+        </script>
+        <style>
+            body{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+            }
+            #box{
+                width:300px;
+                height: 200px;
+                background-color: darkgray;
+                position:absolute;
+                border-radius: 20px;
+                padding: 40px;
+            }
+            #close{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="btn" onclick="popups()">Pop UP</button>
+        <div id="box">
+            <button id="close" onclick="popups()">X</button>
+            <p>
+                This is the content of popup.
+            </p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $("#box").toggle();
+            });
+            function popups()
+            {
+                $("#box").toggle();
+            }
+        </script>
+    </body>
+</html>

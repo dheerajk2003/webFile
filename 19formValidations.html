@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>JSvalidations</title>
+        <title>JavaScript validations</title>
         <style>
             body{
                 padding: 20px 20px; 
@@ -25,6 +25,7 @@
             let myCB = document.querySelector("#check");
             let inputs = document.querySelectorAll(".inputs");
             inputs[4].addEventListener("click",() => {
+                para.innerHTML = "";
                 if(inputs[0].value == "")
                 {
                     para.innerHTML = "* enter email <br>";
